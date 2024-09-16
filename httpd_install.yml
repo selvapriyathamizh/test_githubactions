@@ -1,0 +1,9 @@
+- name: Install httpd
+  hosts: localhost
+  tasks:
+    - name: Install httpd
+      yum:
+        name: "httpd"
+        state: present
+      register: httpd_install
+         
