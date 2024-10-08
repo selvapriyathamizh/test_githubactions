@@ -1,20 +1,11 @@
-- name: Install httpd
+- name: connect to ansible controlle
   hosts: localhost
   tasks:
-
-
     - name: connect to ansible controller
       uri: 
         url: https://44.204.81.48/api/v2/
         header: 
           Content_Type: application/json
           Authorization: "Bearer gjyJzB5ekmrqLM3UfhVYerbMF0PXUl"
-        user: your_username
-        password: your_pass
-        method: POST
-        body: "{{ lookup('ansible.builtin.file','issue.json') }}"
-        force_basic_auth: true
-        status_code: 201
-        body_format: json
 
          
